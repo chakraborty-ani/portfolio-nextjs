@@ -31,7 +31,7 @@ export const metadata = {
 	openGraph: {
 		type: "website",
 		locale: "en_IN",
-		url: "https://portfolio-nextjs-alpha-one.vercel.app/",
+		url: "/",
 		title: "Aniket Chakraborty | Frontend Developer",
 		description: "Frontend Developer specializing in React.js and Next.js. Explore my portfolio to view my latest projects, technical experience, and skills in building scalable web applications.",
 		siteName: "Aniket Chakraborty Portfolio",
