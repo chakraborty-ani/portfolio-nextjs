@@ -1,6 +1,7 @@
 import { Syne, DM_Sans } from "next/font/google"
 import "./globals.css"
 import CustomCursor from "@/components/CustomCursor"
+import { Analytics } from "@vercel/analytics/next"
 
 const syne = Syne({
 	subsets: ["latin"],
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
 			<body className="font-sans bg-bg text-gray-100 antialiased cursor-none">
 				<CustomCursor />
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	)
