@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata = {
-	metadataBase: new URL('https://portfolio-nextjs-alpha-one.vercel.app'),
+	metadataBase: new URL("https://portfolio-nextjs-alpha-one.vercel.app"),
 	title: "Aniket Chakraborty | Frontend Developer",
 	description:
 		"Portfolio of Aniket Chakraborty, a Frontend Developer with 2.5+ years of experience building scalable, responsive web applications using Next.js, React, and TypeScript. Based in Kolkata.",
@@ -33,7 +33,8 @@ export const metadata = {
 		locale: "en_IN",
 		url: "/",
 		title: "Aniket Chakraborty | Frontend Developer",
-		description: "Frontend Developer specializing in React.js and Next.js. Explore my portfolio to view my latest projects, technical experience, and skills in building scalable web applications.",
+		description:
+			"Frontend Developer specializing in React.js and Next.js. Explore my portfolio to view my latest projects, technical experience, and skills in building scalable web applications.",
 		siteName: "Aniket Chakraborty Portfolio",
 		// images: [
 		// 	{
@@ -49,6 +50,9 @@ export const metadata = {
 		title: "Aniket Chakraborty | Frontend Developer",
 		description: "Frontend Developer specializing in React and Next.js.",
 		// images: ["/og-image.png"],
+	},
+	verification: {
+		google: "0wvnPILplG9fobL52sKunIOvCBYDvW0QpZO9FIdCVzg",
 	},
 }
 
