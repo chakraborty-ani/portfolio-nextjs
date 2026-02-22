@@ -22,7 +22,7 @@ export default function Hero() {
 			</Reveal>
 
 			<Reveal delay={0.1}>
-				<h1 className="font-syne font-extrabold text-[clamp(52px,8vw,110px)] leading-[0.92] tracking-[-0.04em]">
+				<h1 className="font-syne font-extrabold text-[8.5vw] sm:text-[42px] md:text-[clamp(52px,8vw,110px)] leading-[0.92] tracking-[-0.04em]">
 					<span className="block">Aniket</span>
 					<span className="block text-accent">Chakraborty</span>
 				</h1>
@@ -52,7 +52,7 @@ export default function Hero() {
 			</Reveal>
 
 			{/* Scroll indicator */}
-			<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+			<div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2">
 				<span className="text-[0.65rem] tracking-[0.15em] uppercase text-muted">Scroll</span>
 				<div className="w-px h-15 bg-linear-to-b from-muted to-transparent origin-top animate-[scrollDrop_1.5s_infinite]"></div>
 			</div>

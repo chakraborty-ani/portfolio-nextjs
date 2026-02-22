@@ -39,7 +39,7 @@ export default function About() {
 								{ num: "9.31", label: "B.Tech CGPA" },
 							].map((stat, i) => (
 								<div key={i}>
-									<div className="font-syne text-[2.5rem] font-extrabold text-accent tracking-[-0.04em]">
+									<div className="font-syne text-3xl md:text-4xl xl:text-5xl font-extrabold text-accent tracking-[-0.04em]">
 										{stat.num}
 									</div>
 									<div className="text-muted text-sm mt-1">{stat.label}</div>
