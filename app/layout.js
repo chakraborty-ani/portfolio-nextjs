@@ -2,6 +2,7 @@ import { Syne, DM_Sans } from "next/font/google"
 import "./globals.css"
 import CustomCursor from "@/components/CustomCursor"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const syne = Syne({
 	subsets: ["latin"],
@@ -64,6 +65,7 @@ export default function RootLayout({ children }) {
 				<CustomCursor />
 				{children}
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)
