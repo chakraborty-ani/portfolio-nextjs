@@ -13,8 +13,42 @@ const dmSans = DM_Sans({
 })
 
 export const metadata = {
-	title: "Aniket Chakraborty — Frontend Developer",
-	description: "Frontend Developer with 2.5+ years crafting scalable, responsive web applications.",
+	title: "Aniket Chakraborty | Frontend Developer",
+	description:
+		"Portfolio of Aniket Chakraborty, a Frontend Developer with 2.5+ years of experience building scalable, responsive web applications using Next.js, React, and TypeScript. Based in Kolkata.",
+	keywords: [
+		"Frontend Developer",
+		"React Developer",
+		"Next.js Developer",
+		"Aniket Chakraborty",
+		"Web Developer Kolkata",
+		"TypeScript",
+		"JavaScript",
+	],
+	authors: [{ name: "Aniket Chakraborty" }],
+	creator: "Aniket Chakraborty",
+	openGraph: {
+		type: "website",
+		locale: "en_IN",
+		url: "https://portfolio-nextjs-alpha-one.vercel.app/",
+		title: "Aniket Chakraborty | Frontend Developer",
+		description: "Frontend Developer specializing in React and Next.js. View my projects and experience.",
+		siteName: "Aniket Chakraborty Portfolio",
+		images: [
+			{
+				url: "/og-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Aniket Chakraborty Portfolio Preview",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Aniket Chakraborty | Frontend Developer",
+		description: "Frontend Developer specializing in React and Next.js.",
+		images: ["/og-image.png"],
+	},
 }
 
 export default function RootLayout({ children }) {
