@@ -35,20 +35,20 @@ export const metadata = {
 		title: "Aniket Chakraborty | Frontend Developer",
 		description: "Frontend Developer specializing in React.js and Next.js. Explore my portfolio to view my latest projects, technical experience, and skills in building scalable web applications.",
 		siteName: "Aniket Chakraborty Portfolio",
-		images: [
-			{
-				url: "/og-image.png",
-				width: 1200,
-				height: 630,
-				alt: "Aniket Chakraborty Portfolio Preview",
-			},
-		],
+		// images: [
+		// 	{
+		// 		url: "/og-image.png",
+		// 		width: 1200,
+		// 		height: 630,
+		// 		alt: "Aniket Chakraborty Portfolio Preview",
+		// 	},
+		// ],
 	},
 	twitter: {
 		card: "summary_large_image",
 		title: "Aniket Chakraborty | Frontend Developer",
 		description: "Frontend Developer specializing in React and Next.js.",
-		images: ["/og-image.png"],
+		// images: ["/og-image.png"],
 	},
 }
 
