@@ -1,6 +1,7 @@
 import { Syne, DM_Sans } from "next/font/google"
 import "./globals.css"
 import CustomCursor from "@/components/CustomCursor"
+import ScrollProgress from "@/components/ScrollProgress"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }) {
 		<html lang="en" className={`${syne.variable} ${dmSans.variable} scroll-smooth`}>
 			<body className="font-sans bg-bg text-gray-100 antialiased cursor-none">
 				<CustomCursor />
+				<ScrollProgress />
 				{children}
 				<Analytics />
 				<SpeedInsights />

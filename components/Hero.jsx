@@ -1,5 +1,6 @@
 "use client"
-import { motion } from "framer-motion"
+import { useRef } from "react"
+import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion"
 import Reveal from "./Reveal"
 import Magnetic from "./Magnetic"
 
@@ -13,18 +14,28 @@ const nameWord = {
 }
 
 export default function Hero() {
+	const sectionRef = useRef(null)
+	const { scrollYProgress } = useScroll({
+		target: sectionRef,
+		offset: ["start start", "end start"],
+	})
+	// Subtle drift only — the watermark should feel like it has depth, not move.
+	const watermarkOffset = useTransform(scrollYProgress, [0, 1], [0, 60])
+	const watermarkY = useMotionTemplate`calc(-50% + ${watermarkOffset}px)`
+
 	return (
 		<section
+			ref={sectionRef}
 			className="relative min-h-screen flex flex-col justify-end px-6 md:px-12 pb-20 overflow-hidden"
 			id="hero"
 		>
 			{/* Background Text */}
-			<div
-				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-syne font-extrabold text-[clamp(120px,18vw,260px)] text-transparent tracking-tighter select-none pointer-events-none w-full text-center"
-				style={{ WebkitTextStroke: "1px rgba(255,255,255,0.04)" }}
+			<motion.div
+				className="absolute top-1/2 left-1/2 font-syne font-extrabold text-[clamp(120px,18vw,260px)] text-transparent tracking-tighter select-none pointer-events-none w-full text-center"
+				style={{ WebkitTextStroke: "1px rgba(255,255,255,0.04)", x: "-50%", y: watermarkY }}
 			>
 				FRONTEND
-			</div>
+			</motion.div>
 
 			<Reveal delay={0}>
 				<div className="inline-flex items-center gap-2 bg-accent-dim border border-accent/20 text-accent text-xs font-medium tracking-widest uppercase py-1.5 px-3.5 rounded-full mb-8 w-fit">
