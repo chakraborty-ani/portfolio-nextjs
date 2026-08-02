@@ -4,6 +4,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion"
 
 export default function CustomCursor() {
 	const [isHovered, setIsHovered] = useState(false)
+	const [label, setLabel] = useState("")
 	const cursorX = useMotionValue(-100)
 	const cursorY = useMotionValue(-100)
 
@@ -20,14 +21,17 @@ export default function CustomCursor() {
 
 		const handleMouseOver = e => {
 			const target = e.target
+			const trigger = target.closest(".hover-trigger")
 			if (
 				target.tagName.toLowerCase() === "a" ||
 				target.tagName.toLowerCase() === "button" ||
-				target.closest(".hover-trigger") // Add this class to skill chips/project cards
+				trigger // Add this class to skill chips/project cards
 			) {
 				setIsHovered(true)
+				setLabel(trigger?.dataset.cursorText || "")
 			} else {
 				setIsHovered(false)
+				setLabel("")
 			}
 		}
 
@@ -45,17 +49,31 @@ export default function CustomCursor() {
 			<motion.div
 				className="fixed top-0 left-0 w-2 h-2 bg-accent rounded-full pointer-events-none z-9999"
 				style={{ x: cursorX, y: cursorY, translateX: "-50%", translateY: "-50%" }}
+				animate={{ opacity: label ? 0 : 1 }}
+				transition={{ duration: 0.15 }}
 			/>
 			{/* Trailing Ring */}
 			<motion.div
-				className="fixed top-0 left-0 border border-accent/40 rounded-full pointer-events-none z-9998"
+				className="fixed top-0 left-0 flex items-center justify-center border border-accent/40 rounded-full pointer-events-none z-9998 overflow-hidden"
 				style={{ x: cursorXSpring, y: cursorYSpring, translateX: "-50%", translateY: "-50%" }}
 				animate={{
-					width: isHovered ? 48 : 32,
-					height: isHovered ? 48 : 32,
+					width: label ? 64 : isHovered ? 48 : 32,
+					height: label ? 64 : isHovered ? 48 : 32,
+					backgroundColor: label ? "rgba(200,245,90,0.12)" : "rgba(200,245,90,0)",
 				}}
 				transition={{ type: "spring", stiffness: 300, damping: 20 }}
-			/>
+			>
+				{label && (
+					<motion.span
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						exit={{ opacity: 0 }}
+						className="text-accent text-[0.65rem] font-semibold tracking-wide uppercase"
+					>
+						{label}
+					</motion.span>
+				)}
+			</motion.div>
 		</>
 	)
 }

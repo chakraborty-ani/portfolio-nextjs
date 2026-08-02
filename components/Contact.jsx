@@ -1,4 +1,5 @@
 import Reveal from "./Reveal"
+import Magnetic from "./Magnetic"
 
 export default function Contact() {
 	return (
@@ -29,23 +30,25 @@ export default function Contact() {
 
 				<Reveal delay={0.3}>
 					<div className="flex justify-center gap-4 flex-wrap">
-						<a
-							href="mailto:anichakraborty20800@gmail.com"
-							className="inline-flex items-center gap-2 py-3 px-7 bg-accent text-bg border border-accent rounded-full font-semibold text-[0.9rem] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
-						>
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								strokeWidth="2"
+						<Magnetic>
+							<a
+								href="mailto:anichakraborty20800@gmail.com"
+								className="inline-flex items-center gap-2 py-3 px-7 bg-accent text-bg border border-accent rounded-full font-semibold text-[0.9rem] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
 							>
-								<rect x="2" y="4" width="20" height="16" rx="2" />
-								<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-							</svg>
-							Email me
-						</a>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									strokeWidth="2"
+								>
+									<rect x="2" y="4" width="20" height="16" rx="2" />
+									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+								</svg>
+								Email me
+							</a>
+						</Magnetic>
 						<a
 							href="tel:7685848451"
 							className="inline-flex items-center gap-2 py-3 px-7 border border-border text-mid rounded-full font-normal text-[0.9rem] transition-colors hover:border-accent hover:text-accent hover:bg-accent-dim hover-trigger"

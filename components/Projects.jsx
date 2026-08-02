@@ -1,6 +1,15 @@
+"use client"
 import Link from "next/link"
 import Reveal from "./Reveal"
 import { projects } from "@/lib/projects"
+
+// Cursor-tracked glow: mutate CSS vars directly on mousemove instead of
+// setState, since this runs on every pointer move and only 4 cards exist.
+function handleCardMouseMove(e) {
+	const rect = e.currentTarget.getBoundingClientRect()
+	e.currentTarget.style.setProperty("--mx", `${((e.clientX - rect.left) / rect.width) * 100}%`)
+	e.currentTarget.style.setProperty("--my", `${((e.clientY - rect.top) / rect.height) * 100}%`)
+}
 
 export default function Projects() {
 	return (
@@ -15,9 +24,17 @@ export default function Projects() {
 					<Reveal key={project.slug} delay={(i % 4) * 0.1}>
 						<Link
 							href={`/projects/${project.slug}`}
+							onMouseMove={handleCardMouseMove}
+							data-cursor-text="View"
 							className="block bg-surface border border-border rounded-2xl p-8 relative overflow-hidden transition-all hover:-translate-y-1 hover:border-accent/30 group h-full hover-trigger"
 						>
-							<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(200,245,90,0.05),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+							<div
+								className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+								style={{
+									backgroundImage:
+										"radial-gradient(circle at var(--mx, 80%) var(--my, 20%), rgba(200,245,90,0.07), transparent 60%)",
+								}}
+							></div>
 							<div className="font-syne text-[0.7rem] font-bold text-border tracking-widest mb-6">
 								{String(i + 1).padStart(2, "0")} — {project.short}
 							</div>

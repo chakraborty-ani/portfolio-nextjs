@@ -3,6 +3,8 @@ import { notFound } from "next/navigation"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import Reveal from "@/components/Reveal"
+import Magnetic from "@/components/Magnetic"
+import AnimatedNumber from "@/components/AnimatedNumber"
 import { projects, getProjectBySlug } from "@/lib/projects"
 
 export function generateStaticParams() {
@@ -107,7 +109,7 @@ export default async function ProjectCaseStudy({ params }) {
 						{project.metrics.map((m, i) => (
 							<div key={i} className="px-5 py-7 bg-surface text-center">
 								<div className="font-syne text-2xl md:text-3xl font-extrabold text-accent tracking-[-0.03em]">
-									{m.value}
+									<AnimatedNumber value={m.value} />
 								</div>
 								<div className="text-muted text-[0.75rem] mt-1.5 leading-snug">{m.label}</div>
 							</div>
@@ -174,12 +176,14 @@ export default async function ProjectCaseStudy({ params }) {
 			{/* NEXT PROJECT */}
 			<section className="px-6 md:px-12 pb-28">
 				<Reveal>
-					<Link
-						href="/#projects"
-						className="inline-flex items-center gap-2 bg-accent text-bg py-3 px-8 rounded-full font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
-					>
-						View all projects
-					</Link>
+					<Magnetic>
+						<Link
+							href="/#projects"
+							className="inline-flex items-center gap-2 bg-accent text-bg py-3 px-8 rounded-full font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
+						>
+							View all projects
+						</Link>
+					</Magnetic>
 				</Reveal>
 			</section>
 

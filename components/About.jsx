@@ -1,4 +1,5 @@
 import Reveal from "./Reveal"
+import AnimatedNumber from "./AnimatedNumber"
 
 export default function About() {
 	const skills = [
@@ -40,7 +41,7 @@ export default function About() {
 							].map((stat, i) => (
 								<div key={i}>
 									<div className="font-syne text-3xl md:text-4xl xl:text-5xl font-extrabold text-accent tracking-[-0.04em]">
-										{stat.num}
+										<AnimatedNumber value={stat.num} />
 									</div>
 									<div className="text-muted text-sm mt-1">{stat.label}</div>
 								</div>

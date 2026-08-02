@@ -1,4 +1,16 @@
+"use client"
+import { motion } from "framer-motion"
 import Reveal from "./Reveal"
+import Magnetic from "./Magnetic"
+
+const nameContainer = {
+	hidden: {},
+	visible: { transition: { staggerChildren: 0.12 } },
+}
+const nameWord = {
+	hidden: { opacity: 0, y: 40 },
+	visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+}
 
 export default function Hero() {
 	return (
@@ -21,12 +33,20 @@ export default function Hero() {
 				</div>
 			</Reveal>
 
-			<Reveal delay={0.1}>
-				<h1 className="font-syne font-extrabold text-[8.5vw] sm:text-[42px] md:text-[clamp(52px,8vw,110px)] leading-[0.92] tracking-[-0.04em]">
-					<span className="block">Aniket</span>
-					<span className="block text-accent">Chakraborty</span>
-				</h1>
-			</Reveal>
+			<motion.h1
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, margin: "-10%" }}
+				variants={nameContainer}
+				className="font-syne font-extrabold text-[8.5vw] sm:text-[42px] md:text-[clamp(52px,8vw,110px)] leading-[0.92] tracking-[-0.04em]"
+			>
+				<motion.span variants={nameWord} className="block">
+					Aniket
+				</motion.span>
+				<motion.span variants={nameWord} className="block text-accent">
+					Chakraborty
+				</motion.span>
+			</motion.h1>
 
 			<Reveal delay={0.2}>
 				<div className="flex flex-col md:flex-row md:items-end justify-between mt-12 gap-8 md:gap-0">
@@ -35,12 +55,14 @@ export default function Hero() {
 						TypeScript, and React Native. Based in Kolkata.
 					</p>
 					<div className="flex gap-4 items-center">
-						<a
-							href="mailto:anichakraborty20800@gmail.com"
-							className="bg-accent text-bg py-3 px-8 rounded-full font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
-						>
-							Get in touch
-						</a>
+						<Magnetic>
+							<a
+								href="mailto:anichakraborty20800@gmail.com"
+								className="bg-accent text-bg py-3 px-8 rounded-full font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(200,245,90,0.3)] hover-trigger"
+							>
+								Get in touch
+							</a>
+						</Magnetic>
 						<a
 							href="#projects"
 							className="text-mid text-sm inline-flex items-center gap-1.5 transition-colors hover:text-white hover-trigger"
