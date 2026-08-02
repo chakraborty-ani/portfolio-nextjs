@@ -18,7 +18,7 @@ export const metadata = {
 	metadataBase: new URL("https://portfolio-nextjs-alpha-one.vercel.app"),
 	title: "Aniket Chakraborty | Frontend Developer",
 	description:
-		"Portfolio of Aniket Chakraborty, a Frontend Developer with 2.5+ years of experience building scalable, responsive web applications using Next.js, React, and TypeScript. Based in Kolkata.",
+		"Portfolio of Aniket Chakraborty, a Frontend Engineer with 3+ years of experience building scalable web and mobile applications using Next.js, TypeScript, and React Native. Based in Kolkata.",
 	keywords: [
 		"Frontend Developer",
 		"React Developer",
@@ -36,7 +36,7 @@ export const metadata = {
 		url: "/",
 		title: "Aniket Chakraborty | Frontend Developer",
 		description:
-			"Frontend Developer specializing in React.js and Next.js. Explore my portfolio to view my latest projects, technical experience, and skills in building scalable web applications.",
+			"Frontend Engineer specializing in Next.js, TypeScript, and React Native. Explore case studies of the products and platforms I've built as a solo or lead frontend contributor.",
 		siteName: "Aniket Chakraborty Portfolio",
 		// images: [
 		// 	{
@@ -50,7 +50,7 @@ export const metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Aniket Chakraborty | Frontend Developer",
-		description: "Frontend Developer specializing in React and Next.js.",
+		description: "Frontend Engineer specializing in Next.js, TypeScript, and React Native.",
 		// images: ["/og-image.png"],
 	},
 	verification: {

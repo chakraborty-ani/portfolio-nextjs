@@ -5,21 +5,23 @@ export default function Experience() {
 		{
 			date: "Aug 2025 — Present",
 			company: "Freeflow Ventures",
-			role: "Senior Frontend Developer",
+			role: "Senior Frontend Engineer",
 			points: [
-				"Serving as Project Owner for assigned initiatives, overseeing delivery and guiding technical decisions.",
-				"Leading frontend development with Next.js, ensuring scalability and performance.",
-				"Coordinating across teams to align design, development, and deployment efforts.",
+				"Serve as Project Owner across 2 products and 5 codebases, owning frontend scope, estimates, technical direction, and release readiness.",
+				"Set architecture at kickoff — component structure, state management, API layering — and deliver as primary contributor on all 5.",
+				"Ship web and mobile in parallel, spanning 94 web routes and a 53-screen React Native app.",
+				"Integrate 480+ REST endpoints against backend services, standardizing token auth, error normalization, and loading states.",
 			],
 		},
 		{
 			date: "Mar 2023 — Jul 2025",
 			company: "Freeflow Ventures",
-			role: "Frontend Developer",
+			role: "Frontend Engineer",
 			points: [
-				"Designed, implemented, and maintained interactive UIs for multiple projects using Next.js.",
-				"Integrated RESTful APIs for dynamic and real-time data rendering.",
-				"Created reusable UI components that improved load times by ~10%.",
+				"Built and shipped client-facing frontends end to end, from design handoff through API integration to production release.",
+				"Delivered the full product surface on each project — authentication, dashboards, role-based access for 3–6 roles, forms, and data-heavy list views.",
+				"Integrated 200+ REST endpoints behind typed API clients with unified authentication and error handling.",
+				"Carried a mid-transition project solo for 30 weeks after taking it over from a departing team.",
 			],
 		},
 	]

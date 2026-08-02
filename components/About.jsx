@@ -3,17 +3,17 @@ import Reveal from "./Reveal"
 export default function About() {
 	const skills = [
 		"Next.js",
-		"React.js",
+		"React Native (Expo)",
 		"TypeScript",
 		"Redux Toolkit",
+		"Zustand",
 		"Tailwind CSS",
 		"Socket.IO",
 		"Firebase",
-		"Framer Motion",
+		"React Hook Form + Zod",
+		"Radix UI / shadcn",
+		"Razorpay",
 		"Docker",
-		"Material UI",
-		"Shadcn/UI",
-		"JavaScript",
 	]
 
 	return (
@@ -34,9 +34,9 @@ export default function About() {
 					<Reveal delay={0.1}>
 						<div className="flex gap-8 md:gap-12 mt-12">
 							{[
-								{ num: "2.5+", label: "Years of experience" },
-								{ num: "5+", label: "Projects shipped" },
-								{ num: "9.31", label: "B.Tech CGPA" },
+								{ num: "3+", label: "Years of experience" },
+								{ num: "4", label: "Key projects delivered" },
+								{ num: "480+", label: "REST endpoints integrated" },
 							].map((stat, i) => (
 								<div key={i}>
 									<div className="font-syne text-3xl md:text-4xl xl:text-5xl font-extrabold text-accent tracking-[-0.04em]">
@@ -52,15 +52,14 @@ export default function About() {
 				<div>
 					<Reveal>
 						<p className="text-mid font-light leading-[1.8] mb-8">
-							I&apos;m a Frontend Developer specializing in React.js and Next.js, focused on
-							performance optimization, clean code, and intuitive user experiences. I thrive in
-							cross-functional teams and enjoy tackling complex UI challenges with thoughtful
-							engineering.
+							I&apos;m a Frontend Engineer specializing in Next.js, TypeScript, and React Native,
+							building dashboards, real-time platforms, and cross-platform products across
+							healthcare, nonprofit, fintech, and consumer domains.
 						</p>
 						<p className="text-mid font-light leading-[1.8]">
-							Currently serving as Senior Frontend Developer & Project Owner at Freeflow
-							Ventures, where I lead technical decisions and guide teams to deliver scalable
-							digital products.
+							Currently serving as Senior Frontend Engineer & Project Owner at Freeflow Ventures,
+							setting architecture across 2 products and 5 codebases and shipping as primary
+							contributor on all five — spanning 94 web routes and a 53-screen React Native app.
 						</p>
 					</Reveal>
 

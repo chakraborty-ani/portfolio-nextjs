@@ -7,7 +7,7 @@ export default function Contact() {
 				<Reveal>
 					<div className="flex items-center justify-center gap-4 text-[0.72rem] font-medium tracking-[0.15em] uppercase text-accent mb-8">
 						<div className="w-8 h-px bg-border"></div>
-						05 / Contact
+						04 / Contact
 						<div className="w-8 h-px bg-border"></div>
 					</div>
 				</Reveal>

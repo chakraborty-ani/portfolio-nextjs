@@ -31,8 +31,8 @@ export default function Hero() {
 			<Reveal delay={0.2}>
 				<div className="flex flex-col md:flex-row md:items-end justify-between mt-12 gap-8 md:gap-0">
 					<p className="max-w-105 text-mid text-base leading-relaxed font-light">
-						Frontend Developer with 2.5+ years crafting scalable, responsive web applications with
-						Next.js, React, and TypeScript. Based in Kolkata.
+						Frontend Engineer with 3+ years building scalable web and mobile products with Next.js,
+						TypeScript, and React Native. Based in Kolkata.
 					</p>
 					<div className="flex gap-4 items-center">
 						<a
